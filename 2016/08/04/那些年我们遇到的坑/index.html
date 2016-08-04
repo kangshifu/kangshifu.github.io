@@ -84,12 +84,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="kangshifu">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论
+1.当我们从eclipse中把项目导入到as中很多.9图片出现问题的时候:在gradel中添加如下代码:
+   aaptOptions.cruncherEnable = false   aaptO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="那些年我们遇到的坑">
+<meta property="og:url" content="http://yoursite.com/2016/08/04/那些年我们遇到的坑/index.html">
 <meta property="og:site_name" content="kangshifu">
+<meta property="og:description" content="### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论
+1.当我们从eclipse中把项目导入到as中很多.9图片出现问题的时候:在gradel中添加如下代码:
+   aaptOptions.cruncherEnable = false   aaptO">
+<meta property="og:updated_time" content="2016-08-04T07:21:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kangshifu">
+<meta name="twitter:title" content="那些年我们遇到的坑">
+<meta name="twitter:description" content="### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论
+1.当我们从eclipse中把项目导入到as中很多.9图片出现问题的时候:在gradel中添加如下代码:
+   aaptOptions.cruncherEnable = false   aaptO">
 
 
 
@@ -107,7 +117,7 @@
   };
 </script>
 
-  <title> kangshifu </title>
+  <title> 那些年我们遇到的坑 | kangshifu </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -128,9 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,9 +215,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -229,10 +237,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/04/那些年我们遇到的坑/" itemprop="url">
-                  那些年我们遇到的坑
-                </a>
+                那些年我们遇到的坑
               
             
           </h1>
@@ -279,9 +284,7 @@
       
 
       
-        
-          
-            <h4 id="从eclipse到idea再到想在的as转变-都曾添加过很多的lib-从以前的add-jar到现在complie-lib-在这其中相信大家有踩到过很多的坑-今天我们就把这些踩过的坑跟大家讨论讨论"><a href="#从eclipse到idea再到想在的as转变-都曾添加过很多的lib-从以前的add-jar到现在complie-lib-在这其中相信大家有踩到过很多的坑-今天我们就把这些踩过的坑跟大家讨论讨论" class="headerlink" title="### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论"></a>### <em>从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论</em></h4><hr>
+        <h4 id="从eclipse到idea再到想在的as转变-都曾添加过很多的lib-从以前的add-jar到现在complie-lib-在这其中相信大家有踩到过很多的坑-今天我们就把这些踩过的坑跟大家讨论讨论"><a href="#从eclipse到idea再到想在的as转变-都曾添加过很多的lib-从以前的add-jar到现在complie-lib-在这其中相信大家有踩到过很多的坑-今天我们就把这些踩过的坑跟大家讨论讨论" class="headerlink" title="### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论"></a>### <em>从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论</em></h4><hr>
 <p><strong>1.当我们从eclipse中把项目导入到as中很多.9图片出现问题的时候:<br>在gradel中添加如下代码:</strong></p>
 <p>   aaptOptions.cruncherEnable = false<br>   aaptOptions.useNewCruncher = false</p>
 <p> 以此来关闭as对PNG的合法性检查</p>
@@ -320,16 +323,19 @@
 <p><strong>10.Android studio编译问题：Gradle DSL not found ‘android()’</strong><br>   问题描述:<br>   error(51,52)错误:-source 1.6不支持diamond运算符(请使用-source 7或更高版来启动diamond运算符)</p>
 <p>   解决方法:<br>    android {<br>compileOptions {sourceCompatibility JavaVersion.VERSION_1_7<br>targetCompatibility JavaVersion.VERSION_1_7<br>}<br>}</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -337,216 +343,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/03/Android之ActivityThread/" rel="next" title="Android之ActivityThread">
+                <i class="fa fa-chevron-left"></i> Android之ActivityThread
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/08/03/Android之ActivityThread/" itemprop="url">
-                  Android之ActivityThread
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T14:53:00+08:00" content="2016-08-03">
-              2016-08-03
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/03/Android之ActivityThread/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/Android之ActivityThread/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="ActivityThread"><a href="#ActivityThread" class="headerlink" title="ActivityThread"></a><strong>ActivityThread</strong></h3><p>  我们都知道android应用程序有一个主activity作为应用的页面启动入口,通常这个activity在manifest我们声明为launcher,但是这是整个apk的启动入口吗,其实不然,类似于java的main方法,android中也有一个main方法，它才是应用的最开始入口，而这个main方法就在ActivityThread类中。</p>
-<h3 id="关于ActivityThread的几个理解点"><a href="#关于ActivityThread的几个理解点" class="headerlink" title="关于ActivityThread的几个理解点"></a><strong>关于ActivityThread的几个理解点</strong></h3><p>  1.它是一个final类所以不能被继承。</p>
-<p>  2.(1)它不是一个线程,但是它管理着应用程序主线程的执行,也就是相当于java中的main方法,并且根据AMS的要求(通过IApplication Threada接口,AMS为client,ActivityThread.ApplicationThread为server,复制调度Activities,broadcasts和其他的操作。</p>
-<pre><code>(2)在android系统中默认的所有activity,service,broadCast都运行在一个进程当中,并由此进程的[主进程]负责执行。
-</code></pre><p>  3.android应用程序的载体是apk文件，本质上是一个资源和组件的容器,apk和其他可执行文件的区别就是每个可执行的文件是运行在一个进程中，但是apk文件可能运行在一个单独的进程也可以和其他的apk运行在一个进程中，可以理解为android系统的设计理念就是弱化进程,而用组件的思想来替代。</p>
-<p>  public final class ActivityThread{</p>
-<pre><code>......
-
-public static void main(String [] args){
-
-  ......
-
-  Looper.prepareMainLooper;//创建MessageQueue的消息队列
-
-  ActivityThread thread = new ActivityThread();
-
-  thread.attach(false);
-
-  if(sMainThreadHandler == null){
-
-      sMainThreadHandler = thread.getHandler();
-  }
-
- ......
-
- }
-
-
- final ApplicationThread mAppThread = new ApplicationThread();
-
- final Looper  mLooper = Looper.myLooper();
-
- final H mH = new H();
-
-}
-</code></pre><p>  程序首先在main()函数执行,调用prepareMainLooper在主线程中创建一个消息队列(MessageQueue)。</p>
-<p>  然后创建ActivityThread对象,ApplicationThread对象,Handler对象。</p>
-<p>  ApplicationThread:它是Binder对象,负责接收远程的AMS的IPC调用。</p>
-<p>  Hander:复制发送消息到消息队列,UI线程会异步的从消息队列中取消息并做相应的操作。</p>
-<p>  当有了这两个对象之后我们可以接收AMS发送来的远程消息,(start,stop,pause)并且可以毁掉到ActivityThread,当ApplicationThread对象接收到AMSf发送start某个activity,就通过handler异步发送消息,ActivityThread.handleMessage取出相应的消息,就会创建指定的activity。</p>
-<pre><code>public void handleMessage(Message msg)
-{
-     switch(msg.what)
-     {
-        case LAUNCH_ACTIVITY:
-
-     ......
-         handleLaunchActivity(r,null);
-
-     ......
-
-     break;
-   }
- }
-</code></pre><p>   进入到handleLaunchActivity中:</p>
-<pre><code>Activity  a = performLaunchActivity(r,cumstomIntent);
-
-if(a != null){
- ......
-
- handleResumeActivity();
- }
-</code></pre><p>   进入到performLaunchActivity返回了Activity对象,看看Activity是怎么被创建的:</p>
-<pre><code>private Activity performLuanchActivity(ActivityClientRecord r,Intent customIntent){
-
-  ......
-
-  Activity activity = null;
-
-  ......
-
-   java.lang.ClassLoader cl = r.packageInfo.getClassLoader();
-
-   activity = mInstrumentation.newActivity(cl,component.getClassName(),r.intent);
-   ......
-
-   return activity;
-
-   }
-
-
-当activty被创建了之后，又会创建相关的类:
-
-contextImlp----&gt;phoneWindow---&gt;WindowManageImpl----&gt;DecorView----&gt;相应的View,ViewGroup(xml布局文件);
-
-创建完毕之后需要把它显示在屏幕上:
-
-WindowManager------&gt;ViewRoot------&gt;WMS远程接口这样一个窗口就被加到屏幕上
-
-因此我们可以得到android应用程序的窗口模型:
-
-Android应用程序窗口=Activity+PhoneWindow+DecorView;
-DecorView = TitleView + contentView;(View的绘制)
-</code></pre><p>####至此我们可以得出的结论android应用程序的运行主要包括:</p>
-<pre><code>1.View的绘制
-
-2.用户消息事件的分发
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -554,6 +376,14 @@ DecorView = TitleView + contentView;(View的绘制)
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/04/那些年我们遇到的坑/"
+           data-title="那些年我们遇到的坑" data-url="http://yoursite.com/2016/08/04/那些年我们遇到的坑/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -573,8 +403,17 @@ DecorView = TitleView + contentView;(View的绘制)
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -610,6 +449,17 @@ DecorView = TitleView + contentView;(View的绘制)
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#从eclipse到idea再到想在的as转变-都曾添加过很多的lib-从以前的add-jar到现在complie-lib-在这其中相信大家有踩到过很多的坑-今天我们就把这些踩过的坑跟大家讨论讨论"><span class="nav-number">1.</span> <span class="nav-text">### 从eclipse到idea再到想在的as转变,都曾添加过很多的lib,从以前的add jar到现在complie lib,在这其中相信大家有踩到过很多的坑,今天我们就把这些踩过的坑跟大家讨论讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-as出错-非法字符：”-ufeff”：需要class-interface-enum"><span class="nav-number">1.1.</span> <span class="nav-text">2.as出错:非法字符：”\ufeff”：需要class,interface,enum</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -706,6 +556,10 @@ DecorView = TitleView + contentView;(View的绘制)
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
