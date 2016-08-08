@@ -167,7 +167,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -230,6 +230,228 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/08/“关于工厂方法秒懂的讲解”/" itemprop="url">
+                  “关于工厂方法秒懂的讲解”
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-08-08T11:35:44+08:00" content="2016-08-08">
+              2016-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/08/“关于工厂方法秒懂的讲解”/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/“关于工厂方法秒懂的讲解”/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/08/“关于工厂方法秒懂的讲解”/" class="leancloud_visitors" data-flag-title="“关于工厂方法秒懂的讲解”">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  七夕不单身,巧用工厂方法创建你想要的女朋友,炸哇(java)面向对象。</p>
+<h3 id="1-简单工厂-什么是简单工厂？"><a href="#1-简单工厂-什么是简单工厂？" class="headerlink" title="1.简单工厂,什么是简单工厂？"></a><strong>1.简单工厂,什么是简单工厂？</strong></h3><p> 下面就要实例来阐述下吧</p>
+<p> (1)定义女朋友的类型</p>
+<p> public enum gfType{</p>
+<pre><code>HU_NAN,GUANG_DONG,BEIJING;
+</code></pre><p> }</p>
+<p>(2)定义女朋友的共有方法抽象类</p>
+<p> public abstract class BaseGF{</p>
+<pre><code>abstract void eat();
+
+void shopping(){
+   System.out.println(&quot;都是购物狂人&quot;);     
+}
+</code></pre><p> }</p>
+<p>(3)创建湖南的女朋友</p>
+<p>   public class HuNanGf extends BaseGf{</p>
+<pre><code>@Override
+public void eat(){
+  System.out.println(&quot;湖南的女朋友喜欢吃辣的&quot;);
+}
+</code></pre><p>   }</p>
+<p>   创建广东的女朋友</p>
+<p>   public class GuangDongGf extends GF{</p>
+<pre><code>@Override 
+public void eat(){
+  System.out.println(&quot;山东的女朋友喜欢吃面食类的&quot;);
+}
+</code></pre><p>   }</p>
+<p>   创建北京的女朋友</p>
+<p>   public class BeiJingGf  extends GF{</p>
+<pre><code>@Override
+public void eat(){
+  System.out.println(&quot;北京的女朋友吃卤煮&quot;);
+
+}
+</code></pre><p>   }</p>
+<p>(4)创建生产女朋友的工厂类</p>
+<p> public BaseGF GFFatroy{</p>
+<pre><code>public static void createGf(GFtype gfType){
+   switch(gfType){
+      case HU_NAN:
+
+        return new HuNanGF();
+
+      case GUANG_DONG:
+
+        return new GuangDongGf();
+
+      case BEIJING:
+
+        return BeiJingGf();
+
+   }
+   return null;
+}
+</code></pre><p> }</p>
+<p> (5)测试想要得到的女朋友<br>  public class test{</p>
+<pre><code>public static void main(String args []){
+   BaseGF gf = new GFFactroy.createGf(Gftype.HU_NAN);
+   gf.eat();
+   gf.shoping();
+}
+</code></pre><p>}</p>
+<h4 id="总结-简单工厂方法提供了一个生产所有产品实例的工厂类-并且这些产品的实例都有一个共同的父类"><a href="#总结-简单工厂方法提供了一个生产所有产品实例的工厂类-并且这些产品的实例都有一个共同的父类" class="headerlink" title="总结:简单工厂方法提供了一个生产所有产品实例的工厂类,并且这些产品的实例都有一个共同的父类"></a><strong>总结:简单工厂方法提供了一个生产所有产品实例的工厂类,并且这些产品的实例都有一个共同的父类</strong></h4><h3 id="2-工厂方法"><a href="#2-工厂方法" class="headerlink" title="2.工厂方法"></a><strong>2.工厂方法</strong></h3><p> 假如现在我们突然想要一个云南的女朋友,那么按照简单工厂方法的模式,我们需要在GFType添加新的女朋友类型,我们需要新建云南女朋友的具体产品类。这样也不符合代码的开闭原则,因此我们创建一个生产女朋友的接口,这样想要哪个地方的女朋友就新建一个自己的工厂类不会影响别的已创建的工厂</p>
+<p>（1）创建生产女朋友的接口</p>
+<pre><code>public interface IGFactroy{
+   BaseGF crateGf();
+}
+</code></pre><p> (2)新建云南女朋友的具体产品类(这个不变）<br>    public class yunNanGf extends BaseGF{</p>
+<pre><code>   @Override
+    public void eat(){
+      Ststem.out.println(&quot;云南女朋友的口味&quot;);
+    }
+
+}
+</code></pre><p> (2)创建云南女朋友的工厂类</p>
+<p>public class YunNanFactroy implements IGFactroy{</p>
+<pre><code>@Override
+public BaseGF createGf(){
+      return new yunNanGf();    
+}
+</code></pre><p>}</p>
+<p>(3)测试新产生的女朋友<br> public class Test{</p>
+<p>   public static void main(String [] args){</p>
+<pre><code>BaseGf  gf = new YunNanFactroy.createGf();
+gf.eat();
+gf.shoping();
+</code></pre><p>   }<br> }</p>
+<h3 id="总结-工厂方法提供了一个可以创建任意产品的接口-让子类决定实例化哪一个类-工厂方法让一个类的实例化延迟到了子类"><a href="#总结-工厂方法提供了一个可以创建任意产品的接口-让子类决定实例化哪一个类-工厂方法让一个类的实例化延迟到了子类" class="headerlink" title="总结:工厂方法提供了一个可以创建任意产品的接口,让子类决定实例化哪一个类,工厂方法让一个类的实例化延迟到了子类"></a>总结:工厂方法提供了一个可以创建任意产品的接口,让子类决定实例化哪一个类,<strong>工厂方法让一个类的实例化延迟到了子类</strong></h3><h4 id="3-抽象工厂方法"><a href="#3-抽象工厂方法" class="headerlink" title="3.抽象工厂方法"></a>3.<strong>抽象工厂方法</strong></h4><p>  多年之后你和女朋友准备结婚了,需要见家长,需要家长的意见该如何处理呢</p>
+<p>  public interface IGFather{</p>
+<pre><code>void sugesstion();
+</code></pre><p>  }</p>
+<p>  public interface IGFactroy{<br>      BaseGf createGf();</p>
+<pre><code>IGFather createFather();
+</code></pre><p>  }</p>
+<p> public class YunNanGFFactroy implements IGFFactroy{<br>     @Override<br>     public BaseGf createGf(){<br>        return new yunNanGf();<br>     }</p>
+<pre><code>@Override
+public IGFFather createGFFactroy(){
+   return new YuNanGFFactroy();
+}
+</code></pre><p> }</p>
+<p> public class YunNanGFFather implements IGFather{</p>
+<pre><code>@Override
+public void suggestion(){
+  System.out.println(&quot;已经同意你们结婚&quot;);
+}
+</code></pre><p> }</p>
+<p> public class Test{<br>   public static void main(String [] args){<br>       IGFFactroy  yunNanGFFactroy = new YunNanGFFactroy();<br>       BaseGf  yunNanGf = yunNanGFFactroy.createGF();<br>       yunNanGf.eat();<br>       yunNanGf.shoping();</p>
+<pre><code>IGFFather yunNanGFFather =           yunNanGFFactroy.createGFFactroy();
+
+yunNanGFFactroy.suggestion();
+</code></pre><p>   }<br> }</p>
+<h4 id="结论-抽象工厂为我们提供了一系列相关或者相互依赖对象的接口而无需指定他们的具体类。"><a href="#结论-抽象工厂为我们提供了一系列相关或者相互依赖对象的接口而无需指定他们的具体类。" class="headerlink" title="结论:抽象工厂为我们提供了一系列相关或者相互依赖对象的接口而无需指定他们的具体类。"></a><strong>结论:抽象工厂为我们提供了一系列相关或者相互依赖对象的接口而无需指定他们的具体类。</strong></h4><p>千里之行,始于足下,自己敲一遍之后是不是对简单工厂(静态工厂),工厂方法,和抽象工厂有了一定的认识。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/04/那些年我们遇到的坑/" itemprop="url">
                   那些年我们遇到的坑
                 </a>
@@ -243,7 +465,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-08-04T14:09:16+08:00" content="2016-08-04">
               2016-08-04
             </time>
@@ -271,7 +493,7 @@
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">Pengunjung </span>
+               <span class="post-meta-item-text">visitors </span>
                <span class="leancloud-visitors-count"></span>
               </span>
           
@@ -390,7 +612,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-08-03T14:53:00+08:00" content="2016-08-03">
               2016-08-03
             </time>
@@ -418,7 +640,7 @@
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">Pengunjung </span>
+               <span class="post-meta-item-text">visitors </span>
                <span class="leancloud-visitors-count"></span>
               </span>
           
@@ -603,8 +825,8 @@ DecorView = TitleView + contentView;(View的绘制)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -651,7 +873,7 @@ DecorView = TitleView + contentView;(View的绘制)
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
